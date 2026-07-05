@@ -2,6 +2,7 @@
 
 ## Your Embedded Hardware
 
+You are developing firmware to run on hardware. What is your hardware?
 Please identify your exact Arduino or ESP development board. Provide a link to the exact board you purchased and, if possible, the schematic for that exact board. You must have the correct schematic.
 
 For example:

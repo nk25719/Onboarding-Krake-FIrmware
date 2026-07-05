@@ -46,11 +46,18 @@ You can start very simply by using an Arduino Uno in this way:
 
 > https://www.youtube.com/watch?v=uYnaEBqN0Z4
 
-Here is a more elaborate Arduino oscilloscope project with measurements and a tutorial:
+That was very limited example. It had no control for sampel rate and was only one channel. But it did demonstrate the serial plotter.
+Note this example used the Arduino IDE version 1 with a plot size of 500 points. Version 2 of the IDE has a 50 point plotter. Use a search or AI with the following qustion, "how to change the Arduino IDE version two serial plotter for 500 data points" for a fix.
+
+Here is a more elaborate multi channel Arduino Serial Plotter using the legeond feature of the Serial Plotter. Again this example was written for the Arduino IDE version 1 plotter.
+>  https://github.com/ForrestErickson/SerialPloterA0A1A2A3A4A5
+
+Here is a very elaborate Arduino oscilloscope project with measurements and a tutorial. It uses a Processing (Jave) sketch for display of the waveforms.
 
 > https://www.instructables.com/Oscilloscope-Arduino-Processing/
 
 Need a function generator? Again, an Arduino Uno can help there too.
+_(NEED SOME EXAMPLES HERE)_
 
 What kind of power supplies do you have?
 
@@ -249,11 +256,11 @@ Go through this process:
 1. Get the example **Blink** sketch, compile it, and load it onto the target.  
    The target can be an Uno or an ESP32.
 
-2. As soon as you verify that `LED_BUILTIN` is blinking, put that code under version control and make the initial commit.
+2. Put under **Version Control**. Using git, as soon as you verify that `LED_BUILTIN` is blinking, put that code under version control and make the initial commit.
 
-3. Clean up the Blink code by removing magic numbers. Create descriptive constants for things like GPIO pin numbers and baud rate. Commit those changes.
+3. Clean up the Blink code by **removing magic numbers**. Create descriptive constants for things like GPIO pin numbers and baud rate. Commit those changes.
 
-4. Add a serial splash screen, for example:
+4. Add a **serial splash** screen, for example:
 
 ```cpp
 void serialSplash() {
@@ -288,12 +295,12 @@ const int LED_BUILTIN = 2;
 
 Always include the program version and compile date/time, and sometimes also the hardware target, author name, and license. Then commit the changes with a descriptive message.
 
-5. Refer to the multitasking article. Apply the second article by removing `delay()` and replacing it with `millis()`. Make a descriptive commit.
+5. **Make Multitasking**. Refer to the multitasking article. Apply the second article by removing `delay()` and replacing it with `millis()`. Make a descriptive commit.
 
-6. For ESP32:  
+6. **WiFi Credentials** For ESP32:  
    Install WiFi Manager and follow the Random Nerd Tutorials guide. Make a descriptive commit.
 
-7. Install ElegantOTA and a filesystem, again following Random Nerd Tutorials. Make a descriptive commit.
+7. **Over The Air** update. Install ElegantOTA and a filesystem, again following Random Nerd Tutorials. Make a descriptive commit.
 
 8. If you have multiple ESP32 boards, customize the access point name using the MAC address. Make a descriptive commit.
 
